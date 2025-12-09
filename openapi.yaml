@@ -1,0 +1,88 @@
+openapi: 3.0.4
+info:
+  title: HTML Entities Encoder/Decoder
+  description: HTML Entities Encoder/Decoder is a tool for encoding and decoding HTML entities. It converts special characters to HTML entities and vice versa to prevent XSS attacks and display special characters properly.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/htmlentities:
+    post:
+      summary: Encode/Decode HTML Entities
+      description: HTML Entities Encoder/Decoder is a tool for encoding and decoding HTML entities. It converts special characters to HTML entities and vice versa to prevent XSS attacks and display special characters properly.
+      operationId: htmlentities
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  action: encode
+                  original: <div class="test">Hello & World</div>
+                  encoded: '&lt;div class=&quot;test&quot;&gt;Hello &amp; World&lt;&#x2F;div&gt;'
+                  entities_replaced:
+                  - <
+                  - '"'
+                  - '>'
+                  - '&'
+                  - /
+                  count: 8
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                html:
+                  type: string
+                  description: The HTML content to encode or HTML entities to decode
+                  example: <div class="test">Hello & World</div>
+                action:
+                  type: string
+                  description: "The action to perform: 'encode' or 'decode' (default: encode)"
+                  default: encode
+                  example: encode
+              required:
+              - html
+              example:
+                html: <div class="test">Hello & World</div>
+                action: encode
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
