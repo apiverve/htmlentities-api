@@ -1,9 +1,18 @@
 {
   "name": "@apiverve/htmlentities",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "HTML Entities Encoder/Decoder is a tool for encoding and decoding HTML entities. It converts special characters to HTML entities and vice versa to prevent XSS attacks and display special characters properly.",
   "main": "index.js",
   "types": "index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "mocha",
     "example": "node examples/basic.js"
@@ -14,14 +23,18 @@
     "directory": "npm"
   },
   "keywords": [
-    "html entities", "html encode", "html decode", "html escape", "html unescape"
+    ""
   ],
-  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "author": {
+    "name": "APIVerve",
+    "email": "hello@apiverve.com",
+    "url": "https://apiverve.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apiverve/htmlentities-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/htmlentities?utm_source=npm",
+  "homepage": "https://apiverve.com/marketplace/htmlentities?utm_source=npm&utm_medium=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
