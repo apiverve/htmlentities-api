@@ -7,16 +7,17 @@ declare module '@apiverve/htmlentities' {
   export interface htmlentitiesResponse {
     status: string;
     error: string | null;
-    data: HTMLEntitiesEncoder/DecoderData;
+    data: HTMLEntitiesEncoderDecoderData;
     code?: number;
   }
 
 
   interface HTMLEntitiesEncoderDecoderData {
-      action:        string;
-      original:      string;
-      result:        string;
-      entitiesCount: number;
+      action:           string;
+      original:         string;
+      encoded:          string;
+      entitiesReplaced: string[];
+      count:            number;
   }
 
   export default class htmlentitiesWrapper {
