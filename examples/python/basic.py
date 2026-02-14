@@ -14,21 +14,14 @@ API_URL = 'https://api.apiverve.com/v1/htmlentities'
 
 def call_htmlentities_api():
     """
-    Make a POST request to the HTML Entities Encoder/Decoder API
+    Make a GET request to the HTML Entities Encoder/Decoder API
     """
     try:
-        # Request body
-        request_body &#x3D; {
-    &#x27;html&#x27;: &#x27;&lt;div class&#x3D;\&#x27;test\&#x27;&gt;Hello &amp; World&lt;/div&gt;&#x27;,
-    &#x27;action&#x27;: &#x27;encode&#x27;
-}
-
         headers = {
-            'x-api-key': API_KEY,
-            'Content-Type': 'application/json'
+            'x-api-key': API_KEY
         }
 
-        response = requests.post(API_URL, headers=headers, json=request_body)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
