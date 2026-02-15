@@ -111,8 +111,9 @@ import com.fasterxml.jackson.annotation.*;
 public class HTMLEntitiesEncoderDecoderData {
     private String action;
     private String original;
-    private String result;
-    private long entitiesCount;
+    private String encoded;
+    private String[] entitiesReplaced;
+    private long count;
 
     @JsonProperty("action")
     public String getAction() { return action; }
@@ -124,13 +125,18 @@ public class HTMLEntitiesEncoderDecoderData {
     @JsonProperty("original")
     public void setOriginal(String value) { this.original = value; }
 
-    @JsonProperty("result")
-    public String getResult() { return result; }
-    @JsonProperty("result")
-    public void setResult(String value) { this.result = value; }
+    @JsonProperty("encoded")
+    public String getEncoded() { return encoded; }
+    @JsonProperty("encoded")
+    public void setEncoded(String value) { this.encoded = value; }
 
-    @JsonProperty("entities_count")
-    public long getEntitiesCount() { return entitiesCount; }
-    @JsonProperty("entities_count")
-    public void setEntitiesCount(long value) { this.entitiesCount = value; }
+    @JsonProperty("entities_replaced")
+    public String[] getEntitiesReplaced() { return entitiesReplaced; }
+    @JsonProperty("entities_replaced")
+    public void setEntitiesReplaced(String[] value) { this.entitiesReplaced = value; }
+
+    @JsonProperty("count")
+    public long getCount() { return count; }
+    @JsonProperty("count")
+    public void setCount(long value) { this.count = value; }
 }
