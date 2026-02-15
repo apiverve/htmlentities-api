@@ -6,7 +6,7 @@
 //
 //    var responseObj = ResponseObj.FromJson(jsonString);
 
-namespace APIVerve.API.HTMLEntitiesEncoder/Decoder
+namespace APIVerve.API.HTMLEntitiesEncoderDecoder
 {
     using System;
     using System.Collections.Generic;
@@ -35,10 +35,13 @@ namespace APIVerve.API.HTMLEntitiesEncoder/Decoder
         [JsonProperty("original")]
         public string Original { get; set; }
 
-        [JsonProperty("result")]
-        public string Result { get; set; }
+        [JsonProperty("encoded")]
+        public string Encoded { get; set; }
 
-        [JsonProperty("entities_count")]
-        public long EntitiesCount { get; set; }
+        [JsonProperty("entities_replaced")]
+        public string[] EntitiesReplaced { get; set; }
+
+        [JsonProperty("count")]
+        public long Count { get; set; }
     }
 }
