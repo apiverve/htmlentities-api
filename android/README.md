@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:htmlentities-api:1.1.13'
+    implementation 'com.github.apiverve:htmlentities-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ HTMLEntitiesEncoderDecoderAPIClient client = new HTMLEntitiesEncoderDecoderAPICl
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("html", "<div>Hello & Welcome</div>");
+    parameters.put("html", "<div class=\"test\">Hello & World</div>");
     parameters.put("action", "encode");
 
     // Execute the request
