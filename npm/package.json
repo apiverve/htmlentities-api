@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/htmlentities",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "HTML Entities Encoder/Decoder is a tool for encoding and decoding HTML entities. It converts special characters to HTML entities and vice versa to prevent XSS attacks and display special characters properly.",
   "main": "index.js",
   "types": "index.d.ts",
