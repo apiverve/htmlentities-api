@@ -51,7 +51,7 @@ func main() {
 
     // Set up parameters
     params := map[string]interface{}{
-        "html": "<div class="test">Hello & World</div>",
+        "html": "<div class=\"test\">Hello & World</div>",
         "action": "encode"
     }
 
