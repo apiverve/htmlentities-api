@@ -44,7 +44,10 @@ from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient
 # Initialize the client with your APIVerve API key
 api = HtmlentitiesAPIClient("[YOUR_API_KEY]")
 
-query = { "html": "<div class=\"test\">Hello & World</div>", "action": "encode" }
+query = {
+    "html": "<div class=\"test\">Hello & World</div>",
+    "action": "encode"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "html": "<div class=\"test\">Hello & World</div>", "action": "encode" }
+query = {
+    "html": "<div class=\"test\">Hello & World</div>",
+    "action": "encode"
+}
 ```
 
 ###### Simple Request
@@ -130,7 +136,10 @@ from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient
 
 api = HtmlentitiesAPIClient("[YOUR_API_KEY]")
 
-query = { "html": "<div class=\"test\">Hello & World</div>", "action": "encode" }
+query = {
+    "html": "<div class=\"test\">Hello & World</div>",
+    "action": "encode"
+}
 
 try:
     result = api.execute(query)
@@ -151,7 +160,10 @@ from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient
 
 api = HtmlentitiesAPIClient("[YOUR_API_KEY]")
 
-query = { "html": "<div class=\"test\">Hello & World</div>", "action": "encode" }
+query = {
+    "html": "<div class=\"test\">Hello & World</div>",
+    "action": "encode"
+}
 
 try:
     result = api.execute(query)
@@ -185,7 +197,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient, HtmlentitiesAPIClientError
 
-query = { "html": "<div class=\"test\">Hello & World</div>", "action": "encode" }
+query = {
+    "html": "<div class=\"test\">Hello & World</div>",
+    "action": "encode"
+}
 
 # Using context manager ensures proper cleanup
 with HtmlentitiesAPIClient("[YOUR_API_KEY]") as api:
@@ -211,7 +226,10 @@ from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient
 # Enable debug mode
 api = HtmlentitiesAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "html": "<div class=\"test\">Hello & World</div>", "action": "encode" }
+query = {
+    "html": "<div class=\"test\">Hello & World</div>",
+    "action": "encode"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -226,8 +244,12 @@ from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient
 
 api = HtmlentitiesAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "html": "<div class=\"test\">Hello & World</div>",
+    "action": "encode"
+}
+
 try:
-    query = { "html": "<div class=\"test\">Hello & World</div>", "action": "encode" }
     result = api.execute(query)
     print(result)
 finally:
