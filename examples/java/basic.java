@@ -12,8 +12,13 @@ public class BasicExample {
         HTMLEntitiesEncoder/DecoderAPIClient client = new HTMLEntitiesEncoder/DecoderAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Execute the API request (no parameters required)
-            APIResponse response = client.execute(null);
+            // Request body
+            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
+        parameters.put(&quot;html&quot;, &quot;&lt;div class&#x3D;&quot;test&quot;&gt;Hello &amp; World&lt;/div&gt;&quot;);
+        parameters.put(&quot;action&quot;, &quot;encode&quot;);
+
+            // Execute the API request
+            APIResponse response = client.execute(parameters);
 
             // Check if the request was successful
             if (response.isSuccess()) {
