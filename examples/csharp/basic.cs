@@ -20,7 +20,7 @@ namespace APIVerve.Examples
         private static readonly string API_URL = "https://api.apiverve.com/v1/htmlentities";
 
         /// <summary>
-        /// Make a GET request to the HTML Entities Encoder/Decoder API
+        /// Make a POST request to the HTML Entities Encoder/Decoder API
         /// </summary>
         static async Task<JsonDocument> CallHTMLEntitiesEncoder/DecoderAPI()
         {
@@ -29,7 +29,13 @@ namespace APIVerve.Examples
                 using var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("x-api-key", API_KEY);
 
-                var response = await client.GetAsync(API_URL);
+                // Request body
+                var requestBody &#x3D; new { html &#x3D; &quot;&lt;div class&#x3D;&quot;test&quot;&gt;Hello &amp; World&lt;/div&gt;&quot;, action &#x3D; &quot;encode&quot; };
+
+                var jsonContent = JsonSerializer.Serialize(requestBody);
+                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+                var response = await client.PostAsync(API_URL, content);
 
                 // Check if response is successful
                 response.EnsureSuccessStatusCode();
