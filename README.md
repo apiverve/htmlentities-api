@@ -199,11 +199,38 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the HTML Entities Encoder/Decoder API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "action": "encode",
+    "original": "<div class=\"test\">Hello & World</div>",
+    "encoded": "&lt;div class=&quot;test&quot;&gt;Hello &amp; World&lt;&#x2F;div&gt;",
+    "entities_replaced": [
+      "<",
+      "\"",
+      ">",
+      "&",
+      "/"
+    ],
+    "count": 8
+  }
 }
 ```
 
