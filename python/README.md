@@ -1,13 +1,12 @@
 HTML Entities Encoder/Decoder API
 ============
 
-HTML Entities Encoder/Decoder is a tool for encoding and decoding HTML entities. It converts special characters to HTML entities and vice versa to prevent XSS attacks and display special characters properly.
+HTML Entities Encoder/Decoder converts special characters into safe HTML entities or restores encoded strings back to standard text. Pass any HTML markup or text snippet to receive the converted string, a replacement count, and a list of modified characters.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [HTML Entities Encoder/Decoder API](https://apiverve.com/marketplace/htmlentities?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-htmlentitiesencoderdecoder.svg)](https://pypi.org/project/apiverve-htmlentitiesencoderdecoder/)
+
+This is a Python wrapper for the [HTML Entities Encoder/Decoder API](https://apiverve.com/marketplace/htmlentities?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -16,21 +15,21 @@ This is a Python API Wrapper for the [HTML Entities Encoder/Decoder API](https:/
 Using `pip`:
 
 ```bash
-pip install apiverve-htmlentitiesencoder/decoder
+pip install apiverve-htmlentitiesencoderdecoder
 ```
 
 Using `pip3`:
 
 ```bash
-pip3 install apiverve-htmlentitiesencoder/decoder
+pip3 install apiverve-htmlentitiesencoderdecoder
 ```
 
 ---
 
 ## Configuration
 
-Before using the htmlentities API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the HTML Entities Encoder/Decoder API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -39,7 +38,7 @@ You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_
 Here's a simple example to get you started quickly:
 
 ```python
-from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient
+from apiverve_htmlentitiesencoderdecoder.apiClient import HtmlentitiesAPIClient
 
 # Initialize the client with your APIVerve API key
 api = HtmlentitiesAPIClient("[YOUR_API_KEY]")
@@ -63,14 +62,14 @@ except Exception as e:
 
 ## Usage
 
-The HTML Entities Encoder/Decoder API documentation is found here: [https://docs.apiverve.com/ref/htmlentities](https://docs.apiverve.com/ref/htmlentities?utm_source=pypi&utm_medium=readme).
+The HTML Entities Encoder/Decoder API documentation is found here: [https://docs.apiverve.com/ref/htmlentities](https://docs.apiverve.com/ref/htmlentities?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ```python
 # Import the client module
-from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient
+from apiverve_htmlentitiesencoderdecoder.apiClient import HtmlentitiesAPIClient
 
 # Initialize the client with your APIVerve API key
 api = HtmlentitiesAPIClient("[YOUR_API_KEY]")
@@ -132,7 +131,7 @@ The API client provides comprehensive error handling through the `HtmlentitiesAP
 ### Basic Error Handling
 
 ```python
-from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient, HtmlentitiesAPIClientError
+from apiverve_htmlentitiesencoderdecoder.apiClient import HtmlentitiesAPIClient, HtmlentitiesAPIClientError
 
 api = HtmlentitiesAPIClient("[YOUR_API_KEY]")
 
@@ -156,7 +155,7 @@ except HtmlentitiesAPIClientError as e:
 ### Handling Specific Error Types
 
 ```python
-from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient, HtmlentitiesAPIClientError
+from apiverve_htmlentitiesencoderdecoder.apiClient import HtmlentitiesAPIClient, HtmlentitiesAPIClientError
 
 api = HtmlentitiesAPIClient("[YOUR_API_KEY]")
 
@@ -195,7 +194,7 @@ except Exception as e:
 The client supports the context manager protocol for automatic resource cleanup:
 
 ```python
-from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient, HtmlentitiesAPIClientError
+from apiverve_htmlentitiesencoderdecoder.apiClient import HtmlentitiesAPIClient, HtmlentitiesAPIClientError
 
 query = {
     "html": "<div class=\"test\">Hello & World</div>",
@@ -221,7 +220,7 @@ with HtmlentitiesAPIClient("[YOUR_API_KEY]") as api:
 Enable debug logging to see detailed request and response information:
 
 ```python
-from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient
+from apiverve_htmlentitiesencoderdecoder.apiClient import HtmlentitiesAPIClient
 
 # Enable debug mode
 api = HtmlentitiesAPIClient("[YOUR_API_KEY]", debug=True)
@@ -240,7 +239,7 @@ result = api.execute(query)
 If you need to manually manage the session lifecycle:
 
 ```python
-from apiverve_htmlentitiesencoder/decoder.apiClient import HtmlentitiesAPIClient
+from apiverve_htmlentitiesencoderdecoder.apiClient import HtmlentitiesAPIClient
 
 api = HtmlentitiesAPIClient("[YOUR_API_KEY]")
 
@@ -261,7 +260,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -272,12 +271,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
