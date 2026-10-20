@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: HTML Entities Encoder/Decoder
   description: >-
-    HTML Entities Encoder/Decoder is a tool for encoding and decoding HTML
-    entities. It converts special characters to HTML entities and vice versa to
-    prevent XSS attacks and display special characters properly.
+    HTML Entities Encoder/Decoder converts special characters into safe HTML
+    entities or restores encoded strings back to standard text. Pass any HTML
+    markup or text snippet to receive the converted string, a replacement count,
+    and a list of modified characters.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/htmlentities:
     post:
-      summary: Encode HTML Entities
+      summary: HTML Entities Encoder/Decoder
       description: Encode HTML special characters to entities for XSS prevention
       operationId: htmlentities
       parameters: []
