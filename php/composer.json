@@ -1,7 +1,7 @@
 {
     "name": "apiverve/htmlentities",
-    "description": "HTML Entities Encoder/Decoder is a tool for encoding and decoding HTML entities. It converts special characters to HTML entities and vice versa to prevent XSS attacks and display special characters properly.",
-    "version": "1.2.0",
+    "description": "HTML Entities Encoder/Decoder converts special characters into safe HTML entities or restores encoded strings back to standard text. Pass any HTML markup or text snippet to receive the converted string, a replacement count, and a list of modified characters.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -21,7 +21,7 @@
         "html escape",
         "html unescape"
     ],
-    "homepage": "https://apiverve.com/marketplace/htmlentities?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/htmlentities?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/htmlentities",

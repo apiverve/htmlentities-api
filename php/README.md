@@ -1,6 +1,6 @@
 # HTML Entities Encoder/Decoder API - PHP Package
 
-HTML Entities Encoder/Decoder is a tool for encoding and decoding HTML entities. It converts special characters to HTML entities and vice versa to prevent XSS attacks and display special characters properly.
+HTML Entities Encoder/Decoder converts special characters into safe HTML entities or restores encoded strings back to standard text. Pass any HTML markup or text snippet to receive the converted string, a replacement count, and a list of modified characters.
 
 ## Installation
 
@@ -94,11 +94,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/htmlentities?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/htmlentities?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/htmlentities?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/htmlentities?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/htmlentities?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/htmlentities?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
