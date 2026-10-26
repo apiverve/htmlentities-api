@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/htmlentities",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "HTML Entities Encoder/Decoder converts special characters into safe HTML entities or restores encoded strings back to standard text. Pass any HTML markup or text snippet to receive the converted string, a replacement count, and a list of modified characters.",
   "main": "index.js",
   "types": "index.d.ts",
