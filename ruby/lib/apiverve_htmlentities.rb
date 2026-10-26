@@ -4,6 +4,6 @@ require_relative "apiverve_htmlentities/client"
 
 module APIVerve
   module Htmlentities
-    VERSION = "1.2.2"
+    VERSION = "1.2.3"
   end
 end
