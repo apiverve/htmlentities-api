@@ -1,11 +1,11 @@
 # HTML Entities Encoder/Decoder API - Dart/Flutter Client
 
-HTML Entities Encoder/Decoder is a tool for encoding and decoding HTML entities. It converts special characters to HTML entities and vice versa to prevent XSS attacks and display special characters properly.
+HTML Entities Encoder/Decoder converts special characters into safe HTML entities or restores encoded strings back to standard text. Pass any HTML markup or text snippet to receive the converted string, a replacement count, and a list of modified characters.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_htmlentities.svg)](https://pub.dev/packages/apiverve_htmlentities)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [HTML Entities Encoder/Decoder API](https://apiverve.com/marketplace/htmlentities?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [HTML Entities Encoder/Decoder API](https://apiverve.com/marketplace/htmlentities?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_htmlentities: ^1.1.14
+  apiverve_htmlentities: ^1.2.4
 ```
 
 Then run:
@@ -70,12 +70,12 @@ void main() async {
 
 ## API Reference
 
-- **API Home:** [HTML Entities Encoder/Decoder API](https://apiverve.com/marketplace/htmlentities?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/htmlentities](https://docs.apiverve.com/ref/htmlentities?utm_source=dart&utm_medium=readme)
+- **API Home:** [HTML Entities Encoder/Decoder API](https://apiverve.com/marketplace/htmlentities?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/htmlentities](https://docs.apiverve.com/ref/htmlentities?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -83,4 +83,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
